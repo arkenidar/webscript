@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<title>forms: 2 numbers summed up</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+
+<div>forms: 2 numbers summed up</div>
+result: <span id="result"></span> <br>
+
+<form id="sum_form">
+<input name="n1" placeholder="first number" type="number" >
+<input name="n2" placeholder="second number" type="number" >
+<input type="submit">
+</form>
+
+<script>
+document.getElementById("sum_form").addEventListener("submit", on_submit)
+function on_submit(event){
+	event.preventDefault()
+	var form=event.target
+
+	var input1 = form.querySelector("input[name=n1]")
+	var input2 = form.querySelector("input[name=n2]")
+
+	var n1 = parseInt(input1.value)
+	var n2 = parseInt(input2.value)
+
+	if(isNaN(n1) || isNaN(n2)) alert("error: not numbers (NaN)")
+
+	var result = n1 + n2
+	document.getElementById("result").innerText = result
+}
+</script>
