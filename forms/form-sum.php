@@ -1,15 +1,15 @@
 <?php
 if(isset($_REQUEST["n1"]) && isset($_REQUEST["n2"]) && is_numeric($_REQUEST["n1"]) && is_numeric($_REQUEST["n2"]) ){
-	
-	// if inputs are all valid then ...
-	$n1 = intval($_REQUEST["n1"]);
-	$n2 = intval($_REQUEST["n2"]);
-	$result = $n1 + $n2 ;
+
+    // if inputs are all valid then ...
+    $n1 = intval($_REQUEST["n1"]);
+    $n2 = intval($_REQUEST["n2"]);
+    $result = $n1 + $n2 ;
 
 }else{
-	$n1 = "";
-	$n2 = "";
-	$result = "not numeric inputs";	
+    $n1 = "";
+    $n2 = "";
+    $result = "not numeric inputs";
 }
 
 ?><!doctype html>
