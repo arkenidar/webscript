@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>percentage</title>
+</head>
+<body>
+
+<p>
+inputs:
+<input class="input" type="number" id="input_number" placeholder="input number">
+<input class="input" type="number" id="percentage" placeholder="percentage"> %
+</p>
+
+<p>
+applied percentage:
+<input type="number" id="applied" placeholder="applied percentage">
+</p>
+
+<script>
+for(var input of document.querySelectorAll(".input")) input.oninput = apply
+function apply() {
+    applied.value = input_number.value * percentage.value / 100
+}
+</script>
+
+</body>
+</html>
