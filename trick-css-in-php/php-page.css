@@ -1,4 +1,7 @@
-<?php $var1 = '50px';
+<?php if( isset($_REQUEST["show-source"]) ) {
+    header('Content-Type: text/plain');
+    die( file_get_contents( $_SERVER['SCRIPT_FILENAME'] ) );
+} ?><?php $var1 = '50px';
 // optionally: php page.css.php > page.css
 ?>
 .box {
