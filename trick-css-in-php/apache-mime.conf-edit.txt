@@ -1,0 +1,19 @@
+	#
+	# AddHandler allows you to map certain file extensions to "handlers":
+	# actions unrelated to filetype. These can be either built into the server
+	# or added with the Action directive (see below)
+	#
+	# To use CGI scripts outside of ScriptAliased directories:
+	# (You will also need to add "ExecCGI" to the "Options" directive.)
+	#
+	#AddHandler cgi-script .cgi
+
+	AddHandler application/x-httpd-php .php    .html .css  .js # CUSTOMization !!!!!!!!!!!!!!!!!!!!!
+
+#   495  grep -R php /etc/apache2/
+#   496  grep -R php /etc/apache2/ | grep custom
+#   497  grep -R php /etc/apache2/ | grep CUSTOM
+#   498  code /etc/apache2/mods-enabled/mime.conf # CUSTOMization : AddHandler application/x-httpd-php .php .html 
+#   499  systemctl restart apache2
+#   500  apachectl restart
+#   501  history
