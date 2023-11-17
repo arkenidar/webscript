@@ -1,0 +1,13 @@
+:root {
+    --square_side: 100px;
+}
+
+.box-var {
+    width: var(--square_side);
+    height: var(--square_side);
+    background-color: greenyellow;
+}
+
+/* CSS-only, without PHP but not as powerful,
+yet built-in into CSS3 and maybe preferable
+at least in some cases, simple cases. */

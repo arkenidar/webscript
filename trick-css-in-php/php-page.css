@@ -1,10 +1,17 @@
 <?php if( isset($_REQUEST["show-source"]) ) {
     header('Content-Type: text/plain');
     die( file_get_contents( $_SERVER['SCRIPT_FILENAME'] ) );
-} ?><?php $var1 = '50px';
+} ?>
+
+<?php
+
+$var1 = '50px';
+
 // optionally: php page.css.php > page.css
 ?>
-.box {
-width: <?= $var1 ?>;
-height: <?= $var1 ?>;
+/* .css but PHP (trick with .htaccess) */
+.box-css {
+ width: <?= $var1 ?>;
+ height: <?= $var1 ?>;
+ background-color: blueviolet;
 }
