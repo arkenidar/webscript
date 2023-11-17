@@ -1,0 +1,33 @@
+# .htaccess scope: setting both UTF-8 and "handling" by PHP
+
+# for html, php
+AddDefaultCharset UTF-8
+
+AddHandler application/x-httpd-php .php
+AddHandler application/x-httpd-php .html
+
+###
+
+# for css, js, etc.
+
+# -> CSS
+
+AddCharset UTF-8 .css
+AddHandler application/x-httpd-php .css
+
+<FilesMatch "\.css\.php$" >
+    Header set Content-type "text/css; charset=utf-8"
+</FilesMatch>
+
+<FilesMatch "\.css$" >
+    Header set Content-type "text/css; charset=utf-8"
+</FilesMatch>
+
+# -> JS
+
+AddCharset UTF-8 .js
+AddHandler application/x-httpd-php .js
+
+<FilesMatch "\.js$" >
+    Header set Content-type "text/javascript; charset=utf-8"
+</FilesMatch>
